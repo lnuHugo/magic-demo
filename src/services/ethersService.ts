@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
-import { Magic } from "magic-sdk";
+import Web3 from "web3";
 
-export const connectMagic = async (magic: Magic) => {
+export const connectMagic = async (magic: Web3) => {
   try {
     const rpcProviderUrl = (magic.rpcProvider as any).rpcUrl;
     const magicProvider: any = new ethers.JsonRpcProvider(rpcProviderUrl);

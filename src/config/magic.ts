@@ -1,4 +1,5 @@
 import { Magic } from "magic-sdk";
+import Web3 from "web3";
 
 
 const magic = new Magic("pk_live_4BBAF9A24C63E31A", {
@@ -6,6 +7,6 @@ const magic = new Magic("pk_live_4BBAF9A24C63E31A", {
 }) as Magic;
 
 
-// const magicWeb3: Web3 = new Web3(magic.rpcProvider as any);
+const magicWeb3: Web3 = new Web3(magic.rpcProvider as any);
 
-export { magic };
+export { magic, magicWeb3 };
